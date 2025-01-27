@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Insurance Records</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vehicle Insurance Records</h1>
+        
+        <!-- Form to add a new record -->
+        <h2>Add Insurance Record</h2>
+        <form id="addRecordForm">
+            <input type="text" id="ownerName" placeholder="Owner Name" required><br>
+            <input type="text" id="licensePlate" placeholder="License Plate" required><br>
+            <input type="text" id="vehicleType" placeholder="Vehicle Type" required><br>
+            <input type="number" id="insuredAmount" placeholder="Insured Amount" required><br>
+            <input type="number" id="insuranceExpiryYear" placeholder="Insurance Expiry Year" required><br>
+            <input type="text" id="claimStatus" placeholder="Claim Status" required><br>
+            <button type="submit">Add Record</button>
+        </form>
+        
+        <!-- Form to delete a record -->
+        <h2>Delete Insurance Record</h2>
+        <form id="deleteRecordForm">
+            <input type="number" id="deleteRecordId" placeholder="Record ID to Delete" required><br>
+            <button type="submit">Delete Record</button>
+        </form>
+
+        <!-- Display records -->
+        <h2>View Record</h2>
+        <input type="number" id="viewRecordId" placeholder="Enter Record ID" required><br>
+        <button id="viewRecordButton">View Record</button>
+        
+        <div id="recordDetails">
+            <p><strong>Owner Name:</strong> <span id="ownerNameDisplay"></span></p>
+            <p><strong>License Plate:</strong> <span id="licensePlateDisplay"></span></p>
+            <p><strong>Vehicle Type:</strong> <span id="vehicleTypeDisplay"></span></p>
+            <p><strong>Insured Amount:</strong> <span id="insuredAmountDisplay"></span></p>
+            <p><strong>Insurance Expiry Year:</strong> <span id="insuranceExpiryYearDisplay"></span></p>
+            <p><strong>Claim Status:</strong> <span id="claimStatusDisplay"></span></p>
+        </div>
+        
+        <p id="statusMessage"></p>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
